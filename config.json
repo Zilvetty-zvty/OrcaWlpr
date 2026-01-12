@@ -1,43 +1,17 @@
 {
-  "app": {
-    "title": "Interactive Whale Wallpaper",
-    "version": "1.0.0"
-  },
   "whale": {
     "fps": 30,
     "maxSpeed": 150,
     "easing": 6,
-    "updateDelay": 15,
-    "scale": 0.05
+    "updateDelay": 15
   },
   "background": {
-    "type": "gradient",
-    "gradient": {
-      "direction": "180deg",
-      "color1": "#0a1628",
-      "color2": "#1a3a5c",
-      "color3": "#0d2137"
-    }
-  },
-  "effects": {
-    "enableParticles": false,
-    "particleCount": 20,
-    "particleOpacity": 0.6,
-    "enableSound": false,
-    "soundVolume": 0.5
+    "color1": "#0a1628",
+    "color2": "#1a3a5c",
+    "color3": "#0d2137"
   },
   "ui": {
-    "showCursor": false,
-    "showControls": true,
-    "controlsPosition": "top-right"
-  },
-  "performance": {
-    "useRequestAnimationFrame": true,
-    "optimizeRendering": true,
-    "cacheSVG": false
-  },
-  "theme": {
-    "darkMode": true,
-    "accentColor": "#00d4ff"
+    "cursorVisible": false,
+    "titlePage": "interactive Whale"
   }
 }
