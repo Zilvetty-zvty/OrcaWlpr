@@ -1,14 +1,54 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>interactive Whale</title>
-  </head>
-  <body>
-    <div id="whale"></div>
-    <script>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Interactive Whale Wallpaper</title>
+</head>
+<body>
+  <div id="whale"></div>
+  
+  <!-- Panel de controles (opcional) -->
+  <div id="controls-panel" class="controls hidden">
+    <div class="control-item">
+      <label for="fps">FPS:</label>
+      <input type="range" id="fps" min="10" max="60" value="30">
+      <span id="fps-value">30</span>
+    </div>
+    <div class="control-item">
+      <label for="speed">Velocidad:</label>
+      <input type="range" id="speed" min="50" max="200" value="150">
+      <span id="speed-value">150</span>
+    </div>
+    <div class="control-item">
+      <label for="gradient-color1">Color 1:</label>
+      <input type="color" id="gradient-color1" value="#0a1628">
+    </div>
+    <div class="control-item">
+      <label for="gradient-color2">Color 2:</label>
+      <input type="color" id="gradient-color2" value="#1a3a5c">
+    </div>
+    <div class="control-item">
+      <label for="gradient-color3">Color 3:</label>
+      <input type="color" id="gradient-color3" value="#0d2137">
+    </div>
+    <button id="toggle-controls">✕</button>
+  </div>
+
+  <script>
+var whale = (function () {
+
+  var element = document.getElementById("whale")
+    , width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth
+    , height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+    , fps = 30
+    , easy = 6
+    , maxspeed = 150
+    , delay = 15
+    , mouse = {x: width/2, y: height/2}
+    , defs
+    , parts
 var whale = (function () {
 
   var element = document.getElementById("whale")
