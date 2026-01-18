@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-  background: linear-gradient(180deg, #0a1628 0%, #1a3a5c 50%, #0d2137 100%);
+  background: #0a1628;
   cursor: none;
 }
 
@@ -22,111 +22,5 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1;
-}
-
-/* Panel de Controles */
-.controls {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: rgba(10, 22, 40, 0.9);
-  border: 2px solid #00d4ff;
-  border-radius: 10px;
-  padding: 20px;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
-  max-width: 300px;
-  font-family: 'Arial', sans-serif;
-  color: #fff;
-  box-shadow: 0 8px 32px rgba(0, 212, 255, 0.2);
-}
-
-.controls.hidden {
-  display: none;
-}
-
-.control-item {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.control-item label {
-  font-size: 12px;
-  font-weight: bold;
-  color: #00d4ff;
-  text-transform: uppercase;
-}
-
-.control-item input[type="range"] {
-  width: 100%;
-  cursor: pointer;
-  accent-color: #00d4ff;
-}
-
-.control-item input[type="color"] {
-  width: 100%;
-  height: 40px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.control-item span {
-  font-size: 12px;
-  color: #b0b0b0;
-}
-
-#toggle-controls {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #00d4ff;
-  color: #0a1628;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#toggle-controls:hover {
-  background: #00a8cc;
-  transform: scale(1.1);
-}
-
-/* Botón para mostrar controles */
-.show-controls-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  background: #00d4ff;
-  color: #0a1628;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 999;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.4);
-}
-
-.show-controls-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.6);
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .controls {
-    top: 10px;
-    right: 10px;
-    max-width: 280px;
-    padding: 15px;
-  }
+  pointer-events: auto;
 }
