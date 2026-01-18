@@ -1,0 +1,6 @@
+name = "orcawallpaper"
+type = "javascript"
+
+[build]
+command = ""
+cwd = "."
